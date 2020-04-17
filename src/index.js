@@ -1,3 +1,10 @@
+/**
+ * Converts a JSON into MGF.
+ * @param {array} parsedMGF Structure containing MGF data in JSON format.
+ * @param {object} [options={}]
+ * @param {string} [options.lineDelimiter='\n'] What delimiter must be used for the lines of the MGF.
+ * @param {string} [options.spectrumDelimiter=' '] What delimiter must be used between x and y values of the spectrum.
+ */
 export default function generateMGF(parsedMGF, options = {}) {
   const { lineDelimiter = '\n', spectrumDelimiter = ' ' } = options;
 

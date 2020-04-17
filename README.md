@@ -4,7 +4,7 @@
 [![build status][ci-image]][ci-url]
 [![npm download][download-image]][download-url]
 
-.
+Generate an MGF out of a JSON file. This package is complementary to [`mgf-parser`](https://github.com/cheminfo/mgf-parser).
 
 ## Installation
 
@@ -13,10 +13,18 @@
 ## Usage
 
 ```js
-import library from 'mgf-generator';
+import { readFileSync } from 'fs';
+import { join } from 'path';
 
-const result = library(args);
-// result is ...
+import generateMGF from 'mgf-generator';
+
+let parsedData = readFileSync(join(__dirname, './data/test.json'), 'utf8');
+
+parsedData = JSON.parse(parsedData);
+
+let result = generateMGF(parsedData);
+
+// result is a string in MGF format
 ```
 
 ## [API Documentation](https://cheminfo.github.io/mgf-generator/)
