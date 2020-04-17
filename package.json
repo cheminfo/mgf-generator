@@ -1,6 +1,6 @@
 {
   "name": "mgf-generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generate an MGF out of a JSON file.",
   "main": "lib/index.js",
   "module": "src/index.js",
